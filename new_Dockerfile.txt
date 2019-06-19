@@ -1,0 +1,4 @@
+FROM python:3
+ADD omdb_api_calling.py /
+RUN pip install pystrich
+CMD [ "python", "./omdb_api_calling.py" ]

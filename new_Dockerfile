@@ -1,0 +1,3 @@
+FROM python:3
+ADD omdb_api_calling.py /
+CMD [ "python", "./omdb_api_calling.py","-OPTIONAL_FLAG"]
