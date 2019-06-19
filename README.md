@@ -25,4 +25,5 @@ Simple application for calling the OMDB rest api
 
 *** Right Now I am facing issue on installing& configuring the docker in windows.
 
-11. 
+11. 11. Find the git close repository : 
+                                        "https://github.com/vivektiwari660/omdb_api_calling.git"
