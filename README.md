@@ -6,7 +6,7 @@ Simple application for calling the OMDB rest api
 3. We also check the requets module, if not installed, we have to install it.
 4. Run python file omdb_api_calling.py in CMD using: python omdb_api_calling.py
 5. Program ask for the user input 
-6. Give the information in the form of XML data.
+6. Give the information in the form of XML data as well as JSON format.
 7. Add docker to the module we Creating a Dockerfile without extension: The file content looks like this 
 
               FROM python:3
@@ -23,7 +23,6 @@ Simple application for calling the OMDB rest api
 
           "docker run -it --rm --name first-python-script -v "$PWD":/usr/src/widget_app python:3 python omdb_api_calling.py"
 
-*** Right Now I am facing issue on installing& configuring the docker in windows.
 
 11. 11. Find the git close repository : 
                                         "https://github.com/vivektiwari660/omdb_api_calling.git"
