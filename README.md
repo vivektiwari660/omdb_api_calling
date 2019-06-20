@@ -1,28 +1,29 @@
-# omdb_api_calling
-Simple application for calling the OMDB rest api
+Simple OMDB api calling application in python
 
 1. Install omdb from internet using: pip install omdb
 2. Generate api keys from the website: http://www.omdbapi.com/apikey.aspx
 3. We also check the requets module, if not installed, we have to install it.
-4. Run python file omdb_api_calling.py in CMD using: python omdb_api_calling.py
-5. Program ask for the user input 
-6. Give the information in the form of XML data as well as JSON format.
-7. Add docker to the module we Creating a Dockerfile without extension: The file content looks like this 
+4. Run python file omdb_api_calling.py in CMD using: python omdb_api_calling.py movie_name  (Only one argument to be passed)
+5. Give the information in the form of Json data.
+6. Add docker to the module we Creating a Dockerfile without extension
 
-              FROM python:3
-              ADD omdb_api_calling.py /
-              RUN pip install pystrich
-              CMD [ "python", "./omdb_api_calling.py","-OPTIONAL_FLAG"]
-              
-              
-8. Ready to built docker with COMMAND:        "docker build -t python-barcode ."
-9.Run Your Image :
-                                               "docker run python-barcode"
-                                               
-10. Run docker with single line: 
-
-          "docker run -it --rm --name first-python-script -v "$PWD":/usr/src/widget_app python:3 python omdb_api_calling.py"
+		#publicly available docker image "python" on docker hub will be pulled
+		FROM python:3
+		#creating directory docker_build in container (linux machine)
+		RUN mkdir c:\home\docker_build
+		#copying .py from local directory to container's docker_build folder
+		COPY omdb_api_calling.py /home/docker_build/omdb_api_calling.py
+		#running omdb_api_calling.py in container
+		CMD python /home/docker_build/omdb_api_calling.py
 
 
-11. 11. Find the git close repository : 
-                                        "https://github.com/vivektiwari660/omdb_api_calling.git"
+
+			OR
+_________________________________________________________________________________
+
+Note: Create a docker container in the server, and installed python3-pip. After installing all the dependies, Create a docker tar file.
+
+7. Find the OMDB.tar file in the git repo and run > docker load -i OMDB.tar
+8. After it is done, we could see the file is loaded as Docker images by running CMD:  > docker images
+9. Run the container using python command: > python omdb_api_calling.py movie_name
+10. Find the git close repository : "https://github.com/vivektiwari660/omdb_api_calling.git"
