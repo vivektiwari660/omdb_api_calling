@@ -9,8 +9,9 @@ print("Success, API is connected")
 # Default for Rotten Tomato rating... 
 client.set_default('tomatoes', True)
 
-cmd_Argument = sys.argv[1]
-print(cmd_Argument)
+cmd_Argument = sys.argv[1:]
+
+#print(cmd_Argument)
 print ("The command line argument is : %s" %(cmd_Argument))
 # User Input 
 #movie_name = str(input("Please enter movie name : "))
@@ -24,9 +25,8 @@ print('* ' * 20)
 
 # Load the JSON to a Python list & dump it back out as formatted JSON
 data = json.loads(my_json)
-
-#movie_title = data["Title"]
-#print("The name of movie is : ", movie_title)
+movie_title = data["Title"]
+print("The Title of the Movie : ", movie_title)
 tomato_rat = data["Ratings"][1]["Value"]
 print("Rotten Tomato rating is : ", tomato_rat)
 print('& ' * 20)
@@ -35,5 +35,3 @@ print('& ' * 20)
 # All the information about particular movie name
 s = json.dumps(data, indent=4, sort_keys=True)
 print(s)
-
-
