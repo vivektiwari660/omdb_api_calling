@@ -24,6 +24,9 @@ print('* ' * 20)
 
 # Load the JSON to a Python list & dump it back out as formatted JSON
 data = json.loads(my_json)
+
+movie_title = data["Title"]
+print("The name of movie is : ", movie_title)
 tomato_rat = data["Ratings"][1]["Value"]
 print("Rotten Tomato rating is : ", tomato_rat)
 print('& ' * 20)
