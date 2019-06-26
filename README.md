@@ -1,3 +1,9 @@
+
+2. Run git clone command
+ 
+   # git clone https://github.com/vivektiwari660/omdb_api_calling.git
+
+
 Simple OMDB api calling application in python
 
 1. Install omdb from internet using: pip install omdb
