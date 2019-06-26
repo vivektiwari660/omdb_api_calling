@@ -27,8 +27,6 @@ Note: Create a docker container in the server, and installed python3-pip. After 
 7. For updated code, we want to push code to the /tmp directory...
 
 docker pull vivekk1/omdb_repo:Python-Container
-Copy the file in the folder. 
+8. Copy the file in the folder. 
+
 docker cp file-name <container-name>:/path
-
-
-7. Find the git close repository : "https://github.com/vivektiwari660/omdb_api_calling.git"
