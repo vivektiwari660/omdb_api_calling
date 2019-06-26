@@ -1,5 +1,5 @@
 
-2. Run git clone command
+Run git clone command
  
    # git clone https://github.com/vivektiwari660/omdb_api_calling.git
 
